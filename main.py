@@ -23,6 +23,7 @@ from fastapi.openapi.utils import get_openapi
 from routes import router as login_router
 from otp import router as otp_router
 from forgotpassword import router as forgot_router
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="Assignment API")
 
