@@ -46,6 +46,7 @@ def custom_openapi():
     openapi_schema = get_openapi(
         title="Assignment API",
         version="1.0.0",
+        openapi_version="3.0.2"
         routes=app.routes,
     )
     for path in openapi_schema["paths"].values():
