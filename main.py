@@ -26,6 +26,14 @@ from forgotpassword import router as forgot_router
 
 app = FastAPI(title="Assignment API")
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 app.include_router(login_router)
 app.include_router(forgot_router)
 app.include_router(otp_router)
