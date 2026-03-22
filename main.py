@@ -64,3 +64,7 @@ def custom_openapi():
 
 
 app.openapi = custom_openapi
+
+@app.get("/")
+async def root():
+    return {"status": "Online", "message": "Assignment API is working! Go to /docs for Swagger."}
