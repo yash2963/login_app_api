@@ -106,7 +106,7 @@ HARDCODED_TOKEN  = "895642"
 #         "is_verified": "true"
 #     }
 
-@router.post('/verify-opt/', responses={
+@router.post('/verify-otp/', responses={
     200: {
         "description": "OTP cannot be empty.",
         "content": {"application/json": {"example": {
